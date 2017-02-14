@@ -37,3 +37,6 @@ border-radius: 2px;
 diplay: inline-block;
 cursor: pointer;
 }
+.strikethrough:checked + .strikeThis {
+  text-decoration: line-through;
+}

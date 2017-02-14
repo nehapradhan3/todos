@@ -7,8 +7,7 @@ import {TodosComponent} from './todos/todos.component';
   selector: 'hello',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  directives:[TodosComponent,
-  ],
+  directives:[TodosComponent]
 
 })
 export class AppComponent {
