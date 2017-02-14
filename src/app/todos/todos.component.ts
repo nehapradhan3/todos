@@ -42,6 +42,14 @@ deleteTodo(index) {
   this.todos.splice(index,1);
 
 }
+// deleteSelectedTodos() {
+//      //need ES5 to reverse loop in order to splice by index
+//      for(var i=(this.todos.length -1); i > -1; i--) {
+//        if(this.todos[i].completed) {
+//          this.todos.splice(i, 1);
+//        }
+//      }
+//    }
 // deleteTodo(todoText) {
 // for(var i=0; i<this.todos.length;i++){
 // if(this.todos[i].text == todoText){

@@ -12,20 +12,22 @@
           </div>
 
           <div [hidden]="newTodo">
-            Type in a new todo...
+            <h3><p class="text-success">Type in a new todo...</p></h3>
           </div>
           <div [hidden]="!newTodo">
 
-            Typing: {{ newTodo }}
+          <h3> <p class="text-danger"> Typing: {{ newTodo }}</p></h3>
             </div>
 
 
           <ul>
           <li *ngFor="let todo of todos; let i=index">
-            {{todo.text}}
+          <p class="text-warning">  {{todo.text}}
               <span (click)="deleteTodo(i)" class="delete-icon"><button type="button" class="btn btn-success">x</button></span>
-            </li>
+          </p>  </li>
             </ul>
 
-
+            <!-- <div class="mtop20">
+                <button (click)="deleteSelectedTodos()">Delete Selected
+                </div> -->
       </div>
