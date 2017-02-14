@@ -3,9 +3,11 @@
         <div class="todos">
 
            <div>
-         <form (submit)="addTodo($event)">
-            <input [(ngModel)]="newTodo" (keyup.enter)="newTodo=''" class="textfield" name="newTodo">
-            <button  type="submit" [disabled]="newTodo===''">Add Todo</button>
+         <form (submit)="addTodo($event)"role="form">
+
+            <input [(ngModel)]="newTodo" (keyup.enter)="newTodo=''" class="form-control" placeholder="Your Task"name="newTodo">
+            <button  type="submit" class="btn btn btn-primary"[disabled]="newTodo===''">Add Todo</button>
+
           </form>
           </div>
 
@@ -13,7 +15,7 @@
             Type in a new todo...
           </div>
           <div [hidden]="!newTodo">
-       <!-- Another two-way binding example -->
+
             Typing: {{ newTodo }}
             </div>
 
@@ -21,7 +23,7 @@
           <ul>
           <li *ngFor="let todo of todos; let i=index">
             {{todo.text}}
-              <span (click)="deleteTodo(i)" class="delete-icon">[X]</span>
+              <span (click)="deleteTodo(i)" class="delete-icon"><button type="button" class="btn btn-success">x</button></span>
             </li>
             </ul>
 
